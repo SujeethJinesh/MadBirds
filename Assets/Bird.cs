@@ -1,18 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Bird : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnMouseDown()
     {
-        
+        GetComponent<SpriteRenderer>().color = Color.red;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnMouseUp()
     {
-        
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
 }
