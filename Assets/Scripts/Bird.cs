@@ -6,32 +6,29 @@ public class Bird : MonoBehaviour
     private Vector3 _initialPosition;
     private bool _birdWasLaunched;
     private float _timeSittingAround;
-    private const float timeout = 2;
+    private Vector3 _boundingBox;
 
-    [SerializeField] private float _launchPower = 250;
+    [SerializeField] private float _launchPower = 300;
+    [SerializeField] private float timeout = 2;
+    [SerializeField] private float boundingBoxWidth = 10;
 
     private void Awake()
     {
         _initialPosition = transform.position;
-
     }
 
     private void Update()
     {
-        GetComponent<LineRenderer>().SetPosition(0, transform.position);
-        GetComponent<LineRenderer>().SetPosition(1, _initialPosition);
+        LineRenderer lineRenderer = GetComponent<LineRenderer>();
+        Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
+        lineRenderer.SetPosition(0, transform.position);
+        lineRenderer.SetPosition(1, _initialPosition);
 
-        if (_birdWasLaunched && GetComponent<Rigidbody2D>().velocity.magnitude <= 0.1)
+        if (_birdWasLaunched && rigidbody2D.velocity.magnitude <= 0.2)
         {
             _timeSittingAround += Time.deltaTime;
         }
-        if (
-            //transform.position.y > 10 ||
-            //transform.position.y < -10 ||
-            //transform.position.x > 10 ||
-            //transform.position.x < -10 ||
-            _timeSittingAround > timeout
-            )
+        if (_timeSittingAround > timeout)
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
@@ -40,25 +37,39 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDown()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
-        GetComponent<LineRenderer>().enabled = true;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        LineRenderer lineRenderer = GetComponent<LineRenderer>();
+
+        spriteRenderer.color = Color.red;
+        lineRenderer.enabled = true;
+        _initialPosition = transform.position;
     }
 
     private void OnMouseUp()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        Rigidbody2D rigidbody =  GetComponent<Rigidbody2D>();
+        LineRenderer lineRenderer = GetComponent<LineRenderer>();
+        spriteRenderer.color = Color.white;
 
         Vector2 directionToInitialPosition = _initialPosition - transform.position;
 
-        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * _launchPower);
-        GetComponent<Rigidbody2D>().gravityScale = 1;
+        rigidbody.AddForce(directionToInitialPosition * _launchPower);
+        rigidbody.gravityScale = 1;
         _birdWasLaunched = true;
-        GetComponent<LineRenderer>().enabled = false;
+        lineRenderer.enabled = false;
     }
 
     private void OnMouseDrag()
     {
-        Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(newPosition.x, newPosition.y, 0);
+        // Get the bounding box positions
+        //Vector3 initialPosition = Camera.main.ScreenToWorldPoint(_initialPosition);
+        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //_boundingBox.x = Mathf.Clamp(mousePos.x, initialPosition.x - boundingBoxWidth, initialPosition.x + boundingBoxWidth);
+        //_boundingBox.y = Mathf.Clamp(mousePos.y, initialPosition.y - boundingBoxWidth, initialPosition.y + boundingBoxWidth);
+        //_boundingBox.z = 0;
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(mousePos.x, mousePos.y, 0);
     }
 }
