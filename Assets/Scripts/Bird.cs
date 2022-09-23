@@ -6,6 +6,7 @@ public class Bird : MonoBehaviour
     private Vector3 _initialPosition;
     private bool _birdWasLaunched;
     private float _timeSittingAround;
+    private const float timeout = 2;
 
     [SerializeField] private float _launchPower = 250;
 
@@ -24,11 +25,13 @@ public class Bird : MonoBehaviour
         {
             _timeSittingAround += Time.deltaTime;
         }
-        if (transform.position.y > 10 ||
-            transform.position.y < -10 ||
-            transform.position.x > 10 ||
-            transform.position.x < -10 ||
-            _timeSittingAround > 3)
+        if (
+            //transform.position.y > 10 ||
+            //transform.position.y < -10 ||
+            //transform.position.x > 10 ||
+            //transform.position.x < -10 ||
+            _timeSittingAround > timeout
+            )
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(currentSceneName);
