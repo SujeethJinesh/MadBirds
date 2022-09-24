@@ -868,6 +868,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cloudParticlePrefab: {fileID: 2647314621201946848, guid: 09ca8fee16a8c4ed1902c0ad1c388313, type: 3}
+  killVelocity: 15
+  obstacleKillVelocity: 7
 --- !u!1 &309348861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 812076619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.19, y: -5.38, z: 0}
+  m_LocalPosition: {x: 2.24, y: -5.38, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1301,6 +1303,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cloudParticlePrefab: {fileID: 2647314621201946848, guid: 09ca8fee16a8c4ed1902c0ad1c388313, type: 3}
+  killVelocity: 15
+  obstacleKillVelocity: 7
 --- !u!1 &953474405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2142,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985492802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.249665, y: -3.2015936, z: 0}
+  m_LocalPosition: {x: -2.6636958, y: -3.1712441, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
