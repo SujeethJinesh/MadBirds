@@ -62,14 +62,15 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        // Get the bounding box positions
-        //Vector3 initialPosition = Camera.main.ScreenToWorldPoint(_initialPosition);
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //_boundingBox.x = Mathf.Clamp(mousePos.x, initialPosition.x - boundingBoxWidth, initialPosition.x + boundingBoxWidth);
-        //_boundingBox.y = Mathf.Clamp(mousePos.y, initialPosition.y - boundingBoxWidth, initialPosition.y + boundingBoxWidth);
-        //_boundingBox.z = 0;
+        transform.position = GetBoundedDragMovement();
+    }
 
+    private Vector3 GetBoundedDragMovement()
+    {
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePos.x, mousePos.y, 0);
+        mousePos.x = Mathf.Clamp(mousePos.x, _initialPosition.x - boundingBoxWidth, _initialPosition.x + boundingBoxWidth);
+        mousePos.y = Mathf.Clamp(mousePos.y, _initialPosition.y - boundingBoxWidth, _initialPosition.y + boundingBoxWidth);
+        mousePos.z = 0;
+        return mousePos;
     }
 }

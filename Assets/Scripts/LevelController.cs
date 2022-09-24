@@ -3,12 +3,16 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    private static int _nextLevelIndex = 1;
+    private static int _nextLevelIndex = 2;
+    private int _sceneCount;
     private Enemy[] _enemies;
+    private Bird[] _birds;
 
     private void OnEnable()
     {
         _enemies = FindObjectsOfType<Enemy>();
+        _birds = FindObjectsOfType<Bird>();
+        _sceneCount = SceneManager.sceneCountInBuildSettings;
     }
 
     // Update is called once per frame
@@ -22,11 +26,14 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        Debug.Log("You've killed all enemies");
-
-        _nextLevelIndex++;
         string nextLevelName = "Level" + _nextLevelIndex;
+        if (SceneUtility.GetBuildIndexByScenePath("path or name of the scene") > -1) {
+            _nextLevelIndex++;
+            SceneManager.LoadScene(nextLevelName);
+        } else
+        {
+            SceneManager.LoadScene("Game Over");
+        }
 
-        SceneManager.LoadScene(nextLevelName);
     }
 }

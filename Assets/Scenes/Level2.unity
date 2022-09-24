@@ -573,6 +573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _launchPower: 250
+  timeout: 2
+  boundingBoxWidth: 2
 --- !u!120 &241602184
 LineRenderer:
   m_ObjectHideFlags: 0
