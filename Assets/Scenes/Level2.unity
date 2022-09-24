@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 47844825}
   - component: {fileID: 47844824}
   - component: {fileID: 47844823}
+  - component: {fileID: 47844827}
   m_Layer: 0
   m_Name: Crate (1)
   m_TagString: Untagged
@@ -256,6 +257,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &47844827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47844822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &241602177
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +880,7 @@ GameObject:
   - component: {fileID: 309348864}
   - component: {fileID: 309348863}
   - component: {fileID: 309348862}
+  - component: {fileID: 309348866}
   m_Layer: 0
   m_Name: Crate (5)
   m_TagString: Untagged
@@ -988,6 +1002,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309348866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309348861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1357,7 @@ GameObject:
   - component: {fileID: 1031271988}
   - component: {fileID: 1031271987}
   - component: {fileID: 1031271986}
+  - component: {fileID: 1031271990}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Untagged
@@ -1452,6 +1479,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1031271990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031271985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1302304838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,6 +1503,7 @@ GameObject:
   - component: {fileID: 1302304841}
   - component: {fileID: 1302304840}
   - component: {fileID: 1302304839}
+  - component: {fileID: 1302304843}
   m_Layer: 0
   m_Name: Crate (2)
   m_TagString: Untagged
@@ -1585,6 +1625,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1302304843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302304838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1705491827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,6 +1808,7 @@ GameObject:
   - component: {fileID: 1744527339}
   - component: {fileID: 1744527338}
   - component: {fileID: 1744527337}
+  - component: {fileID: 1744527341}
   m_Layer: 0
   m_Name: Crate (3)
   m_TagString: Untagged
@@ -1877,6 +1930,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1744527341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744527336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907261279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +1954,7 @@ GameObject:
   - component: {fileID: 1907261282}
   - component: {fileID: 1907261281}
   - component: {fileID: 1907261280}
+  - component: {fileID: 1907261284}
   m_Layer: 0
   m_Name: Crate (4)
   m_TagString: Untagged
@@ -2010,6 +2076,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907261284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907261279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54df4d24b62494699a21981ff3050667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985492802
 GameObject:
   m_ObjectHideFlags: 0

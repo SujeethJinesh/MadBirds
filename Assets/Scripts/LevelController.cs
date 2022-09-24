@@ -32,7 +32,7 @@ public class LevelController : MonoBehaviour
             SceneManager.LoadScene(nextLevelName);
         } else
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("GameOver");
         }
 
     }
