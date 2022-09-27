@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    private static int _nextLevelIndex = 2;
+    private static int _levelIndex = 2;
     private int _sceneCount;
     private Enemy[] _enemies;
     private Bird[] _birds;
@@ -26,9 +26,9 @@ public class LevelController : MonoBehaviour
             }
         }
 
-        string nextLevelName = "Level" + _nextLevelIndex;
-        if (SceneUtility.GetBuildIndexByScenePath("path or name of the scene") > -1) {
-            _nextLevelIndex++;
+        string nextLevelName = "Level" + _levelIndex;
+        if (SceneUtility.GetBuildIndexByScenePath(nextLevelName) > -1) {
+            _levelIndex++;
             SceneManager.LoadScene(nextLevelName);
         } else
         {
